@@ -1,0 +1,54 @@
+{
+  "model_version": "v2.0.0",
+  "trained_at_utc": "2026-03-10T18:34:34.356452+00:00",
+  "feature_order": [
+    "irradiation",
+    "ambient_temperature",
+    "humidity",
+    "cloud_cover",
+    "wind_speed",
+    "hour_sin",
+    "hour_cos",
+    "doy_sin",
+    "doy_cos"
+  ],
+  "dataset_files": [
+    [
+      "Plant_1_Generation_Data.csv",
+      "Plant_1_Weather_Sensor_Data.csv"
+    ],
+    [
+      "Plant_2_Generation_Data.csv",
+      "Plant_2_Weather_Sensor_Data.csv"
+    ]
+  ],
+  "split_time_utc": "2020-06-11T12:30:00",
+  "training_rows": 109196,
+  "test_rows": 27280,
+  "inverter_count": 44,
+  "ambient_temperature_median": 26.2957,
+  "irradiation_median": 0.026559,
+  "metrics": {
+    "normalized_mae": 0.031916,
+    "normalized_r2": 0.853423,
+    "absolute_mae_watts": 39.277,
+    "absolute_r2": 0.85778,
+    "feature_importances": {
+      "irradiation": 0.8312,
+      "ambient_temperature": 0.0196,
+      "humidity": 0.0122,
+      "cloud_cover": 0.0397,
+      "wind_speed": 0.0636,
+      "hour_sin": 0.0088,
+      "hour_cos": 0.0049,
+      "doy_sin": 0.01,
+      "doy_cos": 0.01
+    },
+    "thresholds": {
+      "min_normalized_r2": 0.82,
+      "max_normalized_mae": 0.05
+    },
+    "passes_baseline": true,
+    "warnings": []
+  }
+}
