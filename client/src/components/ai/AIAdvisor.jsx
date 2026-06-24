@@ -55,7 +55,7 @@ export default function AIAdvisor({ predictionData, financialData, weatherData }
               <div className="advisor__empty-icon">💬</div>
               <p>
                 {canUse
-                  ? 'Click "Get AI Analysis" for a comprehensive assessment, or ask a question below.'
+                  ? 'Click "Get AI Analysis" for a solar assessment, or ask any question below.'
                   : 'Run a solar prediction first to enable the AI advisor.'}
               </p>
             </div>
@@ -98,7 +98,7 @@ export default function AIAdvisor({ predictionData, financialData, weatherData }
             type="text"
             className="form-input"
             id="advisor-question-input"
-            placeholder={canUse ? 'Ask about solar panels, savings...' : 'Run prediction first...'}
+            placeholder={canUse ? 'Ask anything, or ask about your solar data...' : 'Run prediction first...'}
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             disabled={loading || !canUse}

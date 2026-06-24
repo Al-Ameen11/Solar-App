@@ -83,7 +83,7 @@ const getSolarAdvice = async (predictionData, financialData, weatherData, userQu
 
   if (userQuestion) {
     // USER ASKED A SPECIFIC QUESTION — answer ONLY that
-    prompt = `You are a friendly solar energy advisor for a homeowner in India. You have the following data about their solar setup:
+    prompt = `You are a helpful AI assistant. The user may ask about solar energy or any general topic. When the question is about their solar setup, use this dashboard data:
 
 ${context}
 
@@ -94,9 +94,11 @@ IMPORTANT RULES:
 - Keep your response short and direct (2-4 sentences max for simple questions, up to 1 paragraph for complex ones).
 - Use simple, non-technical language a common person can understand.
 - Use ₹ for currency.
-- If the user asks something unrelated to solar/energy, politely say you can only help with solar energy topics.
+- If the user asks about solar, energy, savings, subsidy, weather, or appliances, use the dashboard data above when relevant.
+- If the user asks something unrelated to solar/energy, answer it normally as a general assistant.
 - Use 1-2 emojis max (☀️, 💰, 🌿, ⚡).
-- Do NOT repeat data the user already sees on the dashboard.`;
+- Prefer no emojis for unrelated/general questions.
+- Do NOT repeat dashboard data unless it directly helps answer the question.`;
   } else {
     // NO QUESTION — give a brief initial summary
     prompt = `You are a friendly solar energy advisor helping a non-technical homeowner in India. Give a SHORT, simple summary (3 short paragraphs max) of their solar potential.
